@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shekhawat Digital Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+ <img src="assets/img/ChatGPT Image Jun 13, 2025, 02_20_42 PM.png" alt="">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img width="110px" src="assets/img/Shekhawat_Digital_Studio_Logo_Transparent.png" alt="Shekhawat Digital Studio Logo">
+    </div>
+    <nav id="home">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="text-align: center;">Welcome to Shekhawat Digital Studio</h1>
+      <p style="text-align: center;">“Capturing Moments, Creating Memories”</p>
+     <button class="btn-red-sm">Get in Touch</button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2 style="text-align: center;">Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img  src="https://img.icons8.com/ios-filled/100/camera--v1.png" alt="Wedding">
+        <h3>Wedding Photography</h3>
+        <p style="font-size: small;">Capturing timeless wedding memories with creative and cinematic shots.</p>
+      </div>
+      <div class="card">
+        <img width="100px" src="assets/img/pngtree-pre-wedding-silhouette-png-image_6289316.png">
+         <h3>Pre-Wedding Shoots</h3>
+        <p>Romantic and story-driven pre-wedding photo sessions.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/baby.png" alt="Baby">
+        <h3>Baby Shoots</h3>
+        <p>Adorable baby portraits and family moments preserved forever.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/video-editing.png" alt="Video Editing">
+        <h3>Video Editing / Reels</h3>
+        <p>Stylish video reels and cinematic editing for events and brands.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/conference.png" alt="Event">
+        <h3>Event Coverage</h3>
+        <p>Full event photography and videography for all occasions.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Passport">
+        <h3>Passport Size Photo</h3>
+        <p>Quick and high-quality passport size photographs for official use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- portfolio section -->
+   <section id="portfolio" class="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="assets/img/indian-potter-work-handwork-craft-from-shilpagram-udaipur-rajasthan-india_163782-5141.avif" alt="Event Photography">
+      <h3>Event Photography</h3>
+    </div>
+    <div class="portfolio-item">
+      <img src="assets/img/b078c700ab9f72b20d7508ab3fac37c2.jpg" alt="Wedding Shoot">
+      <h3>Wedding Shoot</h3>
+    </div>
+    <div class="portfolio-item">
+      <img src="assets/img/NK_PreWed_109.jpg" alt="Pre-Wedding">
+      <h3>Pre-Wedding</h3>
+    </div>
+    <div class="portfolio-item">
+      <img src="assets/img/th.jpg" alt="Baby Photography">
+      <h3>Baby Photography</h3>
+    </div>
+  </div>
+</section>
+
+<!-- about section -->
+ <section id="about" class="about">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <img src="assets/img/Shekhawat_Digital_Studio_Logo_Transparent.png" alt="About Shekhawat Digital Studio">
+    <p>Shekhawat Digital Studio is a team of passionate photographers and designers who specialize in capturing your best moments and turning them into lifelong memories. From weddings and events to portrait sessions and baby shoots, we bring creativity, expertise, and artistry to every project we undertake.</p>
+  </div>
+</section>
+
+<!-- contact section -->
+ <section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="number"placeholder="Your Number" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+  <!-- Footer -->
+
+  <footer>
+    <p>&copy; 2025 Shekhawat Digital Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+<script>
+  document.querySelector('.contact form').addEventListener('submit', async function (e) { }); {
+    e.preventDefault();
+
+    const data = {
+      name: this.name.value,
+      email: this.email.value,
+      number: this.number.value,
+      message: this.message.value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      alert(result.message || "Message sent!");
+      this.reset();
+    } catch (error) {
+      alert("Failed to send message.");
+    }
+  };
+</script>
+</html>

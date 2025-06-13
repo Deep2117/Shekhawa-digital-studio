@@ -1,0 +1,186 @@
+/* Reset default padding/margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main.box{
+    padding: 0px;
+    margin: 0px;
+    opacity: 0.44;
+    background-color: #000000;
+}
+
+/* Body background */
+body {
+  background-color: rgba(97, 37, 0, 0.775);
+  background-position: center center;
+  background-size: max(1200px, 100vh);
+
+}
+
+/* Header layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  align-items: center;;
+  padding: 15px 50px;
+  background-color: #222;
+  color: white;
+  width: 100%;
+}
+
+/* Logo sizing */
+.logo img {
+  height: fit-content;
+}
+
+/* Navigation style */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* Navigation link style */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hero section */
+.hero {
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  
+}
+
+/* Button styling */
+.btn-red-sm {
+  background-color: #ff0000;
+  color: white;
+  border: black;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-red-sm:hover {
+  background-color: #cc2900;
+}
+
+/* Service Cards Grid */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  color: white;
+}
+
+/* Each Card */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: white;
+  background-color: #111;
+}
+
+.portfolio {
+  padding: 30px;
+  color: #000000;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.portfolio-item {
+  background:rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.about {
+  padding: 30px;
+  color: #000000;
+}
+.about-content {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 20px;
+}
+.about-content img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+.about-content p {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contact {
+  padding: 30px;
+  color: #000000;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+}
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: black;
+}
+.contact form button {
+  padding: 10px 20px;
+  background: #ff6600;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact form button:hover {
+  background: #bb4b00;
+}
